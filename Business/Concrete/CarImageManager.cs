@@ -15,7 +15,7 @@ using System.Text;
 
 namespace Business.Concrete
 {
-    public class CarImageManager:ICarImageService
+    public class CarImageManager : ICarImageService
     {
         ICarImageDal _carImageDal;
 
@@ -72,7 +72,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CarImage>>(CheckIfCarImageNull(id).Data);
         }
 
-        
+
 
         [ValidationAspect(typeof(CarImageValidator))]
         public IResult Update(IFormFile file, CarImage carImage)
