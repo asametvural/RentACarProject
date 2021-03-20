@@ -1,7 +1,11 @@
-<table class="table">
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+<table *ngIf="dataLoaded==true"  class="table">
   <thead>
     <tr>
-      <th>Id</th>
+      <th>#</th>
       <th>Araba Adı</th>
       <th>Marka Id</th>
       <th>Renk Id</th>
